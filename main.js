@@ -11,7 +11,7 @@ function Checkforcode() {
     document.getElementById('result').innerHTML = 'Logging you in'
   }
   else
-    document.getElementById('result').innerHTML = 'Code Invalid'
+    document.getElementById('result').innerHTML = 'Code Invalids'
 
 
 }
