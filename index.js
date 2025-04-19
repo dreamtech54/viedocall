@@ -253,7 +253,16 @@
  let localParticipant;
  let localParticipantAudio;
  let remoteParticipantId = "";
- 
+
+const checkMediaPermission = async () => {
+  //These methods return a Promise that resolve to a Map<string, boolean> object.
+  const checkAudioPermission = await VideoSDK.checkPermissions("audio"); //For getting audio permission
+  const checkVideoPermission = await VideoSDK.checkPermissions("video"); //For getting video permission
+  const checkAudioVideoPermission = await VideoSDK.checkPermissions(
+    "audio_video"
+  );
+
+
  joinButton.addEventListener("click", () => {
    joinButton.style.display = "none";
    textDiv.textContent = "Please wait, we are joining the meeting";
